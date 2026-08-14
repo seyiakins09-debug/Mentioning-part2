@@ -107,6 +107,18 @@ io.on("connection", socket => {
     emitRoom(room);
   });
 
+
+  socket.on("host:set", ({ set }) => {
+    const room = rooms.get(socket.data.room);
+    if (!room || room.hostId !== socket.id || room.started) return;
+    const n = Number(set);
+    if (!Number.isInteger(n) || n < 1 || n > 30) return socket.emit("error:message", "Choose a set from 1 to 30.");
+    room.set = n;
+    room.question = 1;
+    resetQuestion(room);
+    emitRoom(room);
+  });
+
   socket.on("host:start", () => {
     const room = rooms.get(socket.data.room);
     if (!room || room.hostId !== socket.id) return;
@@ -168,6 +180,15 @@ io.on("connection", socket => {
     resetQuestion(room);
     emitRoom(room);
     startTimer(room);
+  });
+
+
+  socket.on("host:home", () => {
+    const room = rooms.get(socket.data.room);
+    if (!room || room.hostId !== socket.id) return;
+    clearInterval(room.timer);
+    io.to(room.code).emit("room:closed", "The host returned to the main page.");
+    rooms.delete(room.code);
   });
 
   socket.on("host:end", () => {
