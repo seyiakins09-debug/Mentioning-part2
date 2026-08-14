@@ -51,8 +51,14 @@ function home(){
 function showHost(){app.innerHTML=`<div class="home"><h1>👑 HOST GAME</h1><input id="hostName" placeholder="Host name"><button class="primary" style="width:100%" onclick="createRoom()">CREATE ROOM</button><button style="margin-top:10px" onclick="home()">← BACK</button></div>`}
 function showJoin(){app.innerHTML=`<div class="home"><h1>🎮 JOIN GAME</h1><input id="joinName" placeholder="Your player name"><input id="joinCode" placeholder="Room code" maxlength="6"><button class="blue" style="width:100%" onclick="joinRoom()">JOIN ROOM</button><button style="margin-top:10px" onclick="home()">← BACK</button></div>`}
 function goHome(){
-  if(role==="host" && room && room.started) return msg("End the game before leaving the room.");
   role=null; room=null; me=null; topInfo.innerHTML=""; home();
+}
+function leaveToHome(){
+  if(role==="host" && room){
+    socket.emit("host:home");
+  }else{
+    goHome();
+  }
 }
 function selectSet(){
   const n=Number(document.getElementById("setSelect")?.value);
@@ -63,13 +69,26 @@ function joinRoom(){const name=document.getElementById("joinName").value.trim(),
 socket.on("host:created",d=>{me=d.hostName;msg("Room created: "+d.code)})
 socket.on("player:joined",d=>{role="player";me=d.name;msg("Joined room "+d.code)})
 socket.on("error:message",msg)
-socket.on("host:home",()=>{ role=null; room=null; me=null; topInfo.innerHTML=""; home(); msg("Returned to the main page."); })
+socket.on("host:home:ok",()=>{ role=null; room=null; me=null; topInfo.innerHTML=""; home(); msg("Returned to the main page."); })
 socket.on("room:closed",s=>{alert(s);home()})
 socket.on("room:update",r=>{
-  const oldSet=room?.set, oldQuestion=room?.question;
+  const oldSet=room?.set, oldQuestion=room?.question, oldStarted=room?.started;
+  const oldSubmitted=room?.players?.find(x=>x.id===socket.id)?.submitted;
   room=r;
-  if(oldSet!==r.set || oldQuestion!==r.question) answerDraft="";
-  render();
+
+  const questionChanged = oldSet!==r.set || oldQuestion!==r.question || oldStarted!==r.started;
+  const submittedChanged = oldSubmitted !== r.players.find(x=>x.id===socket.id)?.submitted;
+
+  if(questionChanged){
+    answerDraft="";
+    playerRenderedQuestion="";
+  }
+
+  if(role==="player"){
+    renderPlayer(questionChanged || submittedChanged);
+  }else{
+    render();
+  }
 })
 
 function headerInfo(){
@@ -87,14 +106,14 @@ function renderHost(){
  app.innerHTML=`<div class="grid">
  <section class="panel left"><div class="title">👑 ROOM ${esc(room.code)}</div>
  <div style="color:var(--muted);margin-bottom:10px">${room.started?"Game in progress":"Lobby — players can join now"}</div>
- ${!room.started?`<label style="display:block;color:var(--muted);font-size:12px;margin:10px 0 5px">SELECT SET</label>
+ ${!room.started?`<label style="display:block;color:var(--gold);font-weight:800;font-size:13px;margin:10px 0 5px">🎯 SELECT SET (1–30)</label>
  <select id="setSelect" onchange="selectSet()" style="width:100%;padding:12px;border-radius:10px;background:#080d1d;color:white;border:1px solid var(--line)">
  ${Array.from({length:30},(_,i)=>`<option value="${i+1}" ${room.set===i+1?"selected":""}>SET ${i+1}</option>`).join("")}
  </select>`:""}
  ${room.players.map((p,i)=>playerCard(p,i)).join("")}
  <div class="controls">
  ${!room.started?`<button class="green" onclick="socket.emit('host:start')">▶ START GAME</button>`:""}
- ${room.started?`<button class="gold" onclick="socket.emit('host:home')">⌂ MAIN PAGE</button>`:`<button onclick="goHome()">← MAIN PAGE</button>`}
+ <button class="gold" onclick="leaveToHome()">⌂ MAIN PAGE</button>
  <button class="red" onclick="socket.emit('host:end')">END GAME</button></div>
  </section>
  <main class="center">
@@ -114,30 +133,68 @@ function getQText(r){return window.questionsCache?.find(x=>x.set===r.set&&x.roun
 window.questionsCache=null;
 fetch("/questions.json").then(x=>x.json()).then(x=>{window.questionsCache=x; if(room)render()});
 
+let playerRenderedQuestion = "";
+let playerRenderedStarted = false;
 let answerDraft = "";
-function renderPlayer(){
- const oldAnswer = document.getElementById("answer");
- if(oldAnswer) answerDraft = oldAnswer.value;
+
+function renderPlayer(force=false){
  const q=room.started?getQText(room):{category:"MENTIONING",question:"Waiting for the host to start…"};
  const p=room.players.find(x=>x.id===socket.id);
- const submitted=p?.submitted;
+ const submitted=!!p?.submitted;
+ const stateKey = `${room.started}|${room.set}|${room.question}|${submitted}`;
+ if(!force && stateKey===playerRenderedQuestion){
+   updatePlayerTimer();
+   updatePlayerStatus();
+   return;
+ }
+ playerRenderedQuestion = stateKey;
+
  app.innerHTML=`<div class="playerGame">
- <div class="panel" style="text-align:center;margin-bottom:14px"><div class="tag">ROOM ${esc(room.code)}</div><h2>${esc(me||"PLAYER")}</h2><div class="chips" style="justify-content:center">${room.players.map(x=>`<div class="chip"><small>${esc(x.name)}</small><strong>${x.xp} XP</strong></div>`).join("")}</div></div>
- <div class="question"><div class="cat">🎯 ${esc(q.category)}</div><h2>${esc(q.question)}</h2>${room.started?`<div class="timer ${room.timeLeft===0?"dead":""}">${String(room.timeLeft).padStart(2,"0")} SEC</div>`:""}</div>
- ${room.started?`<div class="answerBox"><textarea id="answer" placeholder="Type your complete answer here..." ${submitted||room.timeLeft===0?"disabled":""}></textarea><button class="primary" style="width:100%;margin-top:10px" onclick="submitAnswer()" ${submitted||room.timeLeft===0?"disabled":""}>🚀 SUBMIT ANSWER</button><div class="status">${submitted?"✅ Answer submitted. Waiting for the host…":room.timeLeft===0?"⏰ Time is up.":"You have one submission for this question. Make it count!"}</div></div>`:"<div class='status'>Waiting for the host to start the game…</div>"}
+ <div class="panel" style="text-align:center;margin-bottom:14px">
+   <div class="tag">ROOM ${esc(room.code)}</div>
+   <h2>${esc(me||"PLAYER")}</h2>
+   <div class="chips" style="justify-content:center">
+     ${room.players.map(x=>`<div class="chip"><small>${esc(x.name)}</small><strong>${x.xp} XP</strong></div>`).join("")}
+   </div>
+ </div>
+ <div class="question">
+   <div class="cat">🎯 ${esc(q.category)}</div>
+   <h2>${esc(q.question)}</h2>
+ </div>
+ ${room.started?`
+   <div class="answerBox">
+     <textarea id="answer" autocomplete="off" spellcheck="false" placeholder="Type your complete answer here..." ${submitted||room.timeLeft===0?"disabled":""}>${esc(answerDraft)}</textarea>
+     <button id="submitBtn" class="primary" style="width:100%;margin-top:10px" onclick="submitAnswer()" ${submitted||room.timeLeft===0?"disabled":""}>🚀 SUBMIT ANSWER</button>
+     <div id="playerStatus" class="status"></div>
+   </div>`:
+   `<div class="status">Waiting for the host to start the game…</div>`}
  </div>`;
+
  const box=document.getElementById("answer");
- if(box && !submitted && room.timeLeft>0){
-   box.value=answerDraft;
+ if(box){
    box.addEventListener("input",()=>{answerDraft=box.value;});
  }
+ updatePlayerTimer();
+ updatePlayerStatus();
 }
+
+function updatePlayerTimer(){}
+
+function updatePlayerStatus(){
+ const s=document.getElementById("playerStatus");
+ if(!s)return;
+ const p=room.players.find(x=>x.id===socket.id);
+ s.textContent=p?.submitted?"✅ Answer submitted. Waiting for the host…":
+   "You have one submission for this question. Make it count!";
+}
+
 function submitAnswer(){
- const a=document.getElementById("answer")?.value.trim();
+ const box=document.getElementById("answer");
+ const a=box?.value.trim();
  if(!a)return msg("Type your answer first.");
  socket.emit("player:answer",{answer:a});
- answerDraft="";
 }
+
 function award(id){socket.emit("host:award",{playerId:id})}
 home();
 </script>

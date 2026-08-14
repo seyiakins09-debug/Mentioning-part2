@@ -124,18 +124,14 @@ io.on("connection", socket => {
     if (!room || room.hostId !== socket.id) return;
     if (room.players.size < 1) return socket.emit("error:message", "At least one player must join before starting.");
     room.started = true;
-    room.set = 1;
+    // Keep the set selected by the host.
     room.question = 1;
     resetQuestion(room);
-    emitRoom(room);
-    startTimer(room);
-  });
+    emitRoom(room); });
 
   socket.on("host:startTimer", () => {
     const room = rooms.get(socket.data.room);
-    if (!room || room.hostId !== socket.id || !room.started) return;
-    startTimer(room);
-  });
+    if (!room || room.hostId !== socket.id || !room.started) return; });
 
   socket.on("player:answer", ({ answer }) => {
     const room = rooms.get(socket.data.room);
@@ -178,17 +174,18 @@ io.on("connection", socket => {
       return;
     }
     resetQuestion(room);
-    emitRoom(room);
-    startTimer(room);
-  });
+    emitRoom(room); });
 
 
   socket.on("host:home", () => {
     const room = rooms.get(socket.data.room);
     if (!room || room.hostId !== socket.id) return;
     clearInterval(room.timer);
-    io.to(room.code).emit("room:closed", "The host returned to the main page.");
     rooms.delete(room.code);
+    socket.leave(room.code);
+    socket.data.room = null;
+    socket.data.role = null;
+    socket.emit("host:home:ok");
   });
 
   socket.on("host:end", () => {
