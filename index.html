@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEY GAMERZ — MENTIONING</title>
+<script src="/socket.io/socket.io.js"></script>
+<style>
+:root{--bg:#060914;--panel:#0d1530;--panel2:#111c3d;--line:#26386e;--pink:#d946ef;--gold:#ffd21f;--blue:#36a3ff;--green:#22e55b;--red:#ff4757;--text:#f4f7ff;--muted:#9ca9cf}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#15104b,#060914 50%);color:var(--text);font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+button,input,textarea{font:inherit}button{border:0;cursor:pointer;font-weight:800;border-radius:10px;padding:13px 18px;color:white;background:#252f58}button:hover{filter:brightness(1.15)}button:disabled{opacity:.45;cursor:not-allowed}
+.primary{background:linear-gradient(90deg,#a51fe0,#e83cf0)}.green{background:#16c94d}.red{background:#d93243}.blue{background:#1677d9}.gold{background:#c99200}
+.wrap{max-width:1450px;margin:auto;padding:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);background:#080d1d;border-radius:14px;padding:16px 20px;position:sticky;top:8px;z-index:5}
+.brand{font-size:26px;font-weight:900}.brand b{color:#f03de7}.brand span{color:white}.tag{color:var(--gold);font-size:12px;font-weight:900}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);padding:9px 13px;border-radius:10px;text-align:center;min-width:92px}.chip small{display:block;color:var(--muted);font-size:10px}.chip strong{font-size:18px}
+.screen{margin-top:18px}.home{max-width:650px;margin:7vh auto;text-align:center;border:1px solid var(--line);background:rgba(13,21,48,.9);border-radius:20px;padding:38px}.home h1{font-size:46px;margin:8px;color:var(--gold)}.home h2{margin:0 0 30px}.home input{width:100%;padding:15px;border-radius:10px;border:1px solid var(--line);background:#080d1d;color:white;margin:8px 0 12px}.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1}
+.code{font-size:38px;letter-spacing:8px;color:var(--gold);font-weight:900;margin:15px}
+.grid{display:grid;grid-template-columns:300px 1fr 310px;gap:14px}.panel{border:1px solid var(--line);background:rgba(10,17,38,.95);border-radius:14px;padding:14px}.title{color:var(--gold);font-weight:900;margin-bottom:12px}.question{min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,#0d2461,#111342);border-radius:14px;border:1px solid #294da4;padding:28px}.question .cat{color:#ef7cff;font-weight:900}.question h2{font-size:30px;line-height:1.25;margin:16px 0}.timer{font-size:46px;color:var(--gold);font-weight:900}.timer.dead{color:var(--red)}
+.player{border:1px solid var(--line);padding:10px;border-radius:10px;margin:7px 0;background:#0a1025}.playerHead{display:flex;justify-content:space-between;gap:8px}.xp{color:var(--gold);font-weight:900}.answer{margin-top:8px;color:#dbe3ff;white-space:pre-wrap;word-break:break-word;background:#070b18;padding:9px;border-radius:7px}.sub{color:var(--green);font-size:12px}.waiting{color:var(--muted);font-size:12px}
+.scoreRow{display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #1b2750}.winner{outline:2px solid var(--green);background:#0b2816}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.controls button{flex:1;min-width:130px}
+.playerGame{max-width:900px;margin:auto}.playerGame .question{min-height:300px}.answerBox{background:#0d1530;border:1px solid var(--line);padding:18px;border-radius:14px;margin-top:14px}.answerBox textarea{width:100%;min-height:130px;background:#070b18;border:1px solid #2d3d70;color:white;border-radius:10px;padding:14px;resize:vertical}.status{padding:14px;border-radius:10px;margin-top:10px;background:#101a38;color:#d9e1ff}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#111b38;border:1px solid var(--line);padding:12px 18px;border-radius:10px;display:none;z-index:20}
+@media(max-width:1050px){.grid{grid-template-columns:1fr 1fr}.grid .center{grid-column:1/-1;grid-row:1}.grid .left{grid-column:1}.grid .right{grid-column:2}}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.grid>*{grid-column:auto!important}.top{position:static;flex-wrap:wrap}.question h2{font-size:22px}.home h1{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div><div class="brand"><b>SEY</b> <span>GAMERZ</span></div><div class="tag">🎯 MENTIONING — THINK FAST. TYPE FAST. BE FIRST.</div></div>
+  <div id="topInfo"></div>
+</header>
+<div id="app" class="screen"></div>
+</div>
+<div id="toast" class="toast"></div>
+<script>
+const socket=io();
+let role=null, room=null, me=null, lastRoom=null;
+const app=document.getElementById("app"), topInfo=document.getElementById("topInfo"), toast=document.getElementById("toast");
+function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function msg(s){toast.textContent=s;toast.style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>toast.style.display="none",2600)}
+function home(){
+ role=null; room=null; me=null; topInfo.innerHTML="";
+ app.innerHTML=`<div class="home">
+ <div class="tag">🎯 SEY GAMERZ</div><h1>MENTIONING</h1><h2>Think Fast. Type Fast. Be First.</h2>
+ <p style="color:var(--muted)">30 sets • 10 questions per set • 300 built-in questions • 200 XP per winning answer</p>
+ <div class="row"><button class="primary" onclick="showHost()">👑 HOST GAME</button><button class="blue" onclick="showJoin()">🎮 JOIN GAME</button></div>
+ </div>`;
+}
+function showHost(){app.innerHTML=`<div class="home"><h1>👑 HOST GAME</h1><input id="hostName" placeholder="Host name"><button class="primary" style="width:100%" onclick="createRoom()">CREATE ROOM</button><button style="margin-top:10px" onclick="home()">← BACK</button></div>`}
+function showJoin(){app.innerHTML=`<div class="home"><h1>🎮 JOIN GAME</h1><input id="joinName" placeholder="Your player name"><input id="joinCode" placeholder="Room code" maxlength="6"><button class="blue" style="width:100%" onclick="joinRoom()">JOIN ROOM</button><button style="margin-top:10px" onclick="home()">← BACK</button></div>`}
+function createRoom(){role="host";socket.emit("host:create",{name:document.getElementById("hostName").value.trim()||"HOST"})}
+function joinRoom(){const name=document.getElementById("joinName").value.trim(),code=document.getElementById("joinCode").value.trim();if(!name||!code)return msg("Enter your name and room code.");socket.emit("room:join",{name,code})}
+socket.on("host:created",d=>{me=d.hostName;msg("Room created: "+d.code)})
+socket.on("player:joined",d=>{role="player";me=d.name;msg("Joined room "+d.code)})
+socket.on("error:message",msg)
+socket.on("room:closed",s=>{alert(s);home()})
+socket.on("room:update",r=>{room=r; render()})
+
+function headerInfo(){
+ if(!room)return "";
+ return `<div class="chips">
+ <div class="chip"><small>ROOM</small><strong>${esc(room.code)}</strong></div>
+ <div class="chip"><small>SET</small><strong>${room.set}/30</strong></div>
+ <div class="chip"><small>QUESTION</small><strong>${room.question}/10</strong></div>
+ <div class="chip"><small>PLAYERS</small><strong>${room.players.length}</strong></div>
+ </div>`
+}
+function render(){topInfo.innerHTML=headerInfo();if(role==="host")renderHost();else renderPlayer()}
+function renderHost(){
+ const q=room.started?getQText(room):"Waiting for the host to start...";
+ app.innerHTML=`<div class="grid">
+ <section class="panel left"><div class="title">👑 ROOM ${esc(room.code)}</div>
+ <div style="color:var(--muted);margin-bottom:10px">${room.started?"Game in progress":"Lobby — players can join now"}</div>
+ ${room.players.map((p,i)=>playerCard(p,i)).join("")}
+ <div class="controls">${!room.started?`<button class="green" onclick="socket.emit('host:start')">▶ START GAME</button>`:""}<button class="red" onclick="socket.emit('host:end')">END GAME</button></div>
+ </section>
+ <main class="center">
+   <div class="question"><div class="cat">🎯 ${room.started?esc(q.category):"MENTIONING"}</div><h2>${esc(room.started?q.question:"Waiting for the first question…")}</h2>
+   ${room.started?`<div class="timer ${room.timeLeft===0?"dead":""}">${String(room.timeLeft).padStart(2,"0")} SEC</div>`:""}
+   </div>
+   <div class="controls">${room.started?`<button class="gold" onclick="socket.emit('host:startTimer')">⏱ START / RESTART TIMER</button><button class="blue" onclick="socket.emit('host:next')">NEXT QUESTION →</button>`:""}</div>
+ </main>
+ <aside class="panel right"><div class="title">🏆 LIVE LEADERBOARD</div>${[...room.players].sort((a,b)=>b.xp-a.xp).map((p,i)=>`<div class="scoreRow"><span>${i+1}. ${esc(p.name)}</span><span class="xp">${p.xp} XP</span></div>`).join("")}
+ <div class="title" style="margin-top:18px">📝 SUBMITTED ANSWERS</div>
+ ${room.players.map(p=>`<div class="player ${p.winner?"winner":""}"><div class="playerHead"><b>${esc(p.name)}</b>${p.submitted?'<span class="sub">SUBMITTED</span>':'<span class="waiting">WAITING</span>'}</div>${p.submitted?`<div class="answer">${esc(p.answer)}</div><button class="green" style="width:100%;margin-top:7px" onclick="award('${p.id}')">✓ CORRECT +200 XP</button>`:""}</div>`).join("")}
+ </aside></div>
+ <div class="panel" style="margin-top:14px;text-align:center;color:var(--muted)">Players submit their answer once per question. The host judges the answer and awards <b style="color:var(--gold)">200 XP</b>. NEXT QUESTION resets submissions for everyone.</div>`;
+}
+function playerCard(p,i){return `<div class="player"><div class="playerHead"><b>${i+1}. ${esc(p.name)}</b><span class="xp">${p.xp} XP</span></div><div style="font-size:12px;color:${p.submitted?"var(--green)":"var(--muted)"}">${p.submitted?"✓ Answer submitted":"Waiting for answer"}</div></div>`}
+function getQText(r){return window.questionsCache?.find(x=>x.set===r.set&&x.round===r.question)||{category:"Question",question:"Loading question…"}}
+window.questionsCache=null;
+fetch("/questions.json").then(x=>x.json()).then(x=>{window.questionsCache=x; if(room)render()});
+
+function renderPlayer(){
+ const q=room.started?getQText(room):{category:"MENTIONING",question:"Waiting for the host to start…"};
+ const p=room.players.find(x=>x.id===socket.id);
+ const submitted=p?.submitted;
+ app.innerHTML=`<div class="playerGame">
+ <div class="panel" style="text-align:center;margin-bottom:14px"><div class="tag">ROOM ${esc(room.code)}</div><h2>${esc(me||"PLAYER")}</h2><div class="chips" style="justify-content:center">${room.players.map(x=>`<div class="chip"><small>${esc(x.name)}</small><strong>${x.xp} XP</strong></div>`).join("")}</div></div>
+ <div class="question"><div class="cat">🎯 ${esc(q.category)}</div><h2>${esc(q.question)}</h2>${room.started?`<div class="timer ${room.timeLeft===0?"dead":""}">${String(room.timeLeft).padStart(2,"0")} SEC</div>`:""}</div>
+ ${room.started?`<div class="answerBox"><textarea id="answer" placeholder="Type your complete answer here..." ${submitted||room.timeLeft===0?"disabled":""}></textarea><button class="primary" style="width:100%;margin-top:10px" onclick="submitAnswer()" ${submitted||room.timeLeft===0?"disabled":""}>🚀 SUBMIT ANSWER</button><div class="status">${submitted?"✅ Answer submitted. Waiting for the host…":room.timeLeft===0?"⏰ Time is up.":"You have one submission for this question. Make it count!"}</div></div>`:"<div class='status'>Waiting for the host to start the game…</div>"}
+ </div>`;
+}
+function submitAnswer(){const a=document.getElementById("answer")?.value.trim();if(!a)return msg("Type your answer first.");socket.emit("player:answer",{answer:a})}
+function award(id){socket.emit("host:award",{playerId:id})}
+home();
+</script>
+</body>
+</html>

@@ -1,0 +1,1802 @@
+[
+  {
+    "set": 1,
+    "round": 1,
+    "category": "Names",
+    "question": "Mention 5 male names that start with A."
+  },
+  {
+    "set": 1,
+    "round": 2,
+    "category": "Names",
+    "question": "Mention 5 female names that start with B."
+  },
+  {
+    "set": 1,
+    "round": 3,
+    "category": "Names",
+    "question": "Mention 5 Nigerian names that start with C."
+  },
+  {
+    "set": 1,
+    "round": 4,
+    "category": "Names",
+    "question": "Mention 5 names that start with D."
+  },
+  {
+    "set": 1,
+    "round": 5,
+    "category": "Names",
+    "question": "Mention 5 names that start with E."
+  },
+  {
+    "set": 1,
+    "round": 6,
+    "category": "Names",
+    "question": "Mention 5 names that start with F."
+  },
+  {
+    "set": 1,
+    "round": 7,
+    "category": "Names",
+    "question": "Mention 5 names that start with G."
+  },
+  {
+    "set": 1,
+    "round": 8,
+    "category": "Names",
+    "question": "Mention 5 names that start with H."
+  },
+  {
+    "set": 1,
+    "round": 9,
+    "category": "Names",
+    "question": "Mention 5 names that start with I."
+  },
+  {
+    "set": 1,
+    "round": 10,
+    "category": "Names",
+    "question": "Mention 5 names that start with J."
+  },
+  {
+    "set": 2,
+    "round": 1,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with A."
+  },
+  {
+    "set": 2,
+    "round": 2,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with B."
+  },
+  {
+    "set": 2,
+    "round": 3,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with C."
+  },
+  {
+    "set": 2,
+    "round": 4,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with D."
+  },
+  {
+    "set": 2,
+    "round": 5,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with E."
+  },
+  {
+    "set": 2,
+    "round": 6,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with F."
+  },
+  {
+    "set": 2,
+    "round": 7,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with G."
+  },
+  {
+    "set": 2,
+    "round": 8,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with H."
+  },
+  {
+    "set": 2,
+    "round": 9,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with I."
+  },
+  {
+    "set": 2,
+    "round": 10,
+    "category": "Countries",
+    "question": "Mention 5 countries that start with J."
+  },
+  {
+    "set": 3,
+    "round": 1,
+    "category": "Places",
+    "question": "Mention 5 cities in Africa."
+  },
+  {
+    "set": 3,
+    "round": 2,
+    "category": "Places",
+    "question": "Mention 5 cities in Europe."
+  },
+  {
+    "set": 3,
+    "round": 3,
+    "category": "Places",
+    "question": "Mention 5 cities in Asia."
+  },
+  {
+    "set": 3,
+    "round": 4,
+    "category": "Places",
+    "question": "Mention 5 cities in North America."
+  },
+  {
+    "set": 3,
+    "round": 5,
+    "category": "Places",
+    "question": "Mention 5 cities in South America."
+  },
+  {
+    "set": 3,
+    "round": 6,
+    "category": "Places",
+    "question": "Mention 5 cities in Australia or Oceania."
+  },
+  {
+    "set": 3,
+    "round": 7,
+    "category": "Places",
+    "question": "Mention 5 famous islands."
+  },
+  {
+    "set": 3,
+    "round": 8,
+    "category": "Places",
+    "question": "Mention 5 famous deserts."
+  },
+  {
+    "set": 3,
+    "round": 9,
+    "category": "Places",
+    "question": "Mention 5 famous mountains."
+  },
+  {
+    "set": 3,
+    "round": 10,
+    "category": "Places",
+    "question": "Mention 5 famous waterfalls."
+  },
+  {
+    "set": 4,
+    "round": 1,
+    "category": "Technology",
+    "question": "Mention 5 smartphone brands."
+  },
+  {
+    "set": 4,
+    "round": 2,
+    "category": "Technology",
+    "question": "Mention 5 web browsers."
+  },
+  {
+    "set": 4,
+    "round": 3,
+    "category": "Technology",
+    "question": "Mention 5 programming languages."
+  },
+  {
+    "set": 4,
+    "round": 4,
+    "category": "Technology",
+    "question": "Mention 5 social media platforms."
+  },
+  {
+    "set": 4,
+    "round": 5,
+    "category": "Technology",
+    "question": "Mention 5 search engines."
+  },
+  {
+    "set": 4,
+    "round": 6,
+    "category": "Technology",
+    "question": "Mention 5 computer operating systems."
+  },
+  {
+    "set": 4,
+    "round": 7,
+    "category": "Technology",
+    "question": "Mention 5 cloud-storage services."
+  },
+  {
+    "set": 4,
+    "round": 8,
+    "category": "Technology",
+    "question": "Mention 5 messaging applications."
+  },
+  {
+    "set": 4,
+    "round": 9,
+    "category": "Technology",
+    "question": "Mention 5 computer hardware components."
+  },
+  {
+    "set": 4,
+    "round": 10,
+    "category": "Technology",
+    "question": "Mention 5 artificial-intelligence applications or tools."
+  },
+  {
+    "set": 5,
+    "round": 1,
+    "category": "Music",
+    "question": "Mention 5 musical instruments."
+  },
+  {
+    "set": 5,
+    "round": 2,
+    "category": "Music",
+    "question": "Mention 5 music genres."
+  },
+  {
+    "set": 5,
+    "round": 3,
+    "category": "Music",
+    "question": "Mention 5 Nigerian music artists."
+  },
+  {
+    "set": 5,
+    "round": 4,
+    "category": "Music",
+    "question": "Mention 5 African music artists outside Nigeria."
+  },
+  {
+    "set": 5,
+    "round": 5,
+    "category": "Music",
+    "question": "Mention 5 international music artists."
+  },
+  {
+    "set": 5,
+    "round": 6,
+    "category": "Music",
+    "question": "Mention 5 things found in a recording studio."
+  },
+  {
+    "set": 5,
+    "round": 7,
+    "category": "Music",
+    "question": "Mention 5 music award shows."
+  },
+  {
+    "set": 5,
+    "round": 8,
+    "category": "Music",
+    "question": "Mention 5 instruments played with keys."
+  },
+  {
+    "set": 5,
+    "round": 9,
+    "category": "Music",
+    "question": "Mention 5 instruments played with strings."
+  },
+  {
+    "set": 5,
+    "round": 10,
+    "category": "Music",
+    "question": "Mention 5 things a DJ may use during a performance."
+  },
+  {
+    "set": 6,
+    "round": 1,
+    "category": "Movies & TV",
+    "question": "Mention 5 superhero characters."
+  },
+  {
+    "set": 6,
+    "round": 2,
+    "category": "Movies & TV",
+    "question": "Mention 5 animated movies."
+  },
+  {
+    "set": 6,
+    "round": 3,
+    "category": "Movies & TV",
+    "question": "Mention 5 movie genres."
+  },
+  {
+    "set": 6,
+    "round": 4,
+    "category": "Movies & TV",
+    "question": "Mention 5 streaming services."
+  },
+  {
+    "set": 6,
+    "round": 5,
+    "category": "Movies & TV",
+    "question": "Mention 5 famous fictional villains."
+  },
+  {
+    "set": 6,
+    "round": 6,
+    "category": "Movies & TV",
+    "question": "Mention 5 Nigerian movies."
+  },
+  {
+    "set": 6,
+    "round": 7,
+    "category": "Movies & TV",
+    "question": "Mention 5 African TV series."
+  },
+  {
+    "set": 6,
+    "round": 8,
+    "category": "Movies & TV",
+    "question": "Mention 5 famous fictional detectives."
+  },
+  {
+    "set": 6,
+    "round": 9,
+    "category": "Movies & TV",
+    "question": "Mention 5 fantasy movies or franchises."
+  },
+  {
+    "set": 6,
+    "round": 10,
+    "category": "Movies & TV",
+    "question": "Mention 5 things commonly found on a film set."
+  },
+  {
+    "set": 7,
+    "round": 1,
+    "category": "Sports",
+    "question": "Mention 5 football clubs."
+  },
+  {
+    "set": 7,
+    "round": 2,
+    "category": "Sports",
+    "question": "Mention 5 football positions."
+  },
+  {
+    "set": 7,
+    "round": 3,
+    "category": "Sports",
+    "question": "Mention 5 basketball teams."
+  },
+  {
+    "set": 7,
+    "round": 4,
+    "category": "Sports",
+    "question": "Mention 5 tennis players."
+  },
+  {
+    "set": 7,
+    "round": 5,
+    "category": "Sports",
+    "question": "Mention 5 Olympic sports."
+  },
+  {
+    "set": 7,
+    "round": 6,
+    "category": "Sports",
+    "question": "Mention 5 athletics events."
+  },
+  {
+    "set": 7,
+    "round": 7,
+    "category": "Sports",
+    "question": "Mention 5 football competitions."
+  },
+  {
+    "set": 7,
+    "round": 8,
+    "category": "Sports",
+    "question": "Mention 5 sports played with a racket."
+  },
+  {
+    "set": 7,
+    "round": 9,
+    "category": "Sports",
+    "question": "Mention 5 sports played on a field."
+  },
+  {
+    "set": 7,
+    "round": 10,
+    "category": "Sports",
+    "question": "Mention 5 sports played on water."
+  },
+  {
+    "set": 8,
+    "round": 1,
+    "category": "Food",
+    "question": "Mention 5 Nigerian soups."
+  },
+  {
+    "set": 8,
+    "round": 2,
+    "category": "Food",
+    "question": "Mention 5 Nigerian rice dishes."
+  },
+  {
+    "set": 8,
+    "round": 3,
+    "category": "Food",
+    "question": "Mention 5 fruits that start with P."
+  },
+  {
+    "set": 8,
+    "round": 4,
+    "category": "Food",
+    "question": "Mention 5 vegetables that are commonly eaten."
+  },
+  {
+    "set": 8,
+    "round": 5,
+    "category": "Food",
+    "question": "Mention 5 foods made from maize or corn."
+  },
+  {
+    "set": 8,
+    "round": 6,
+    "category": "Food",
+    "question": "Mention 5 foods made from potatoes."
+  },
+  {
+    "set": 8,
+    "round": 7,
+    "category": "Food",
+    "question": "Mention 5 breakfast foods."
+  },
+  {
+    "set": 8,
+    "round": 8,
+    "category": "Food",
+    "question": "Mention 5 street foods."
+  },
+  {
+    "set": 8,
+    "round": 9,
+    "category": "Food",
+    "question": "Mention 5 foods commonly eaten with stew."
+  },
+  {
+    "set": 8,
+    "round": 10,
+    "category": "Food",
+    "question": "Mention 5 spices or seasonings."
+  },
+  {
+    "set": 9,
+    "round": 1,
+    "category": "Animals",
+    "question": "Mention 5 animals that live in water."
+  },
+  {
+    "set": 9,
+    "round": 2,
+    "category": "Animals",
+    "question": "Mention 5 animals that can fly."
+  },
+  {
+    "set": 9,
+    "round": 3,
+    "category": "Animals",
+    "question": "Mention 5 animals found in Africa."
+  },
+  {
+    "set": 9,
+    "round": 4,
+    "category": "Animals",
+    "question": "Mention 5 big cats."
+  },
+  {
+    "set": 9,
+    "round": 5,
+    "category": "Animals",
+    "question": "Mention 5 reptiles."
+  },
+  {
+    "set": 9,
+    "round": 6,
+    "category": "Animals",
+    "question": "Mention 5 mammals."
+  },
+  {
+    "set": 9,
+    "round": 7,
+    "category": "Animals",
+    "question": "Mention 5 birds."
+  },
+  {
+    "set": 9,
+    "round": 8,
+    "category": "Animals",
+    "question": "Mention 5 animals that lay eggs."
+  },
+  {
+    "set": 9,
+    "round": 9,
+    "category": "Animals",
+    "question": "Mention 5 farm animals."
+  },
+  {
+    "set": 9,
+    "round": 10,
+    "category": "Animals",
+    "question": "Mention 5 nocturnal animals."
+  },
+  {
+    "set": 10,
+    "round": 1,
+    "category": "Things",
+    "question": "Mention 5 things found in a classroom."
+  },
+  {
+    "set": 10,
+    "round": 2,
+    "category": "Things",
+    "question": "Mention 5 things found in a kitchen."
+  },
+  {
+    "set": 10,
+    "round": 3,
+    "category": "Things",
+    "question": "Mention 5 things found in a bedroom."
+  },
+  {
+    "set": 10,
+    "round": 4,
+    "category": "Things",
+    "question": "Mention 5 things people carry in a bag."
+  },
+  {
+    "set": 10,
+    "round": 5,
+    "category": "Things",
+    "question": "Mention 5 things that need electricity."
+  },
+  {
+    "set": 10,
+    "round": 6,
+    "category": "Things",
+    "question": "Mention 5 things that can be locked."
+  },
+  {
+    "set": 10,
+    "round": 7,
+    "category": "Things",
+    "question": "Mention 5 things made of metal."
+  },
+  {
+    "set": 10,
+    "round": 8,
+    "category": "Things",
+    "question": "Mention 5 things found in an office."
+  },
+  {
+    "set": 10,
+    "round": 9,
+    "category": "Things",
+    "question": "Mention 5 things used for cleaning."
+  },
+  {
+    "set": 10,
+    "round": 10,
+    "category": "Things",
+    "question": "Mention 5 things people wear on their feet."
+  },
+  {
+    "set": 11,
+    "round": 1,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian states beginning with A."
+  },
+  {
+    "set": 11,
+    "round": 2,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian cities."
+  },
+  {
+    "set": 11,
+    "round": 3,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian languages."
+  },
+  {
+    "set": 11,
+    "round": 4,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian foods."
+  },
+  {
+    "set": 11,
+    "round": 5,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian festivals."
+  },
+  {
+    "set": 11,
+    "round": 6,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian football clubs."
+  },
+  {
+    "set": 11,
+    "round": 7,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian musicians."
+  },
+  {
+    "set": 11,
+    "round": 8,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian rivers."
+  },
+  {
+    "set": 11,
+    "round": 9,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian universities."
+  },
+  {
+    "set": 11,
+    "round": 10,
+    "category": "Nigeria",
+    "question": "Mention 5 Nigerian landmarks."
+  },
+  {
+    "set": 12,
+    "round": 1,
+    "category": "World Knowledge",
+    "question": "Mention 5 oceans, seas or major bodies of water."
+  },
+  {
+    "set": 12,
+    "round": 2,
+    "category": "World Knowledge",
+    "question": "Mention 5 planets or dwarf planets."
+  },
+  {
+    "set": 12,
+    "round": 3,
+    "category": "World Knowledge",
+    "question": "Mention 5 famous scientists."
+  },
+  {
+    "set": 12,
+    "round": 4,
+    "category": "World Knowledge",
+    "question": "Mention 5 famous inventors."
+  },
+  {
+    "set": 12,
+    "round": 5,
+    "category": "World Knowledge",
+    "question": "Mention 5 famous writers."
+  },
+  {
+    "set": 12,
+    "round": 6,
+    "category": "World Knowledge",
+    "question": "Mention 5 world landmarks."
+  },
+  {
+    "set": 12,
+    "round": 7,
+    "category": "World Knowledge",
+    "question": "Mention 5 currencies."
+  },
+  {
+    "set": 12,
+    "round": 8,
+    "category": "World Knowledge",
+    "question": "Mention 5 languages spoken by millions of people."
+  },
+  {
+    "set": 12,
+    "round": 9,
+    "category": "World Knowledge",
+    "question": "Mention 5 famous historical leaders."
+  },
+  {
+    "set": 12,
+    "round": 10,
+    "category": "World Knowledge",
+    "question": "Mention 5 international organizations."
+  },
+  {
+    "set": 13,
+    "round": 1,
+    "category": "Business",
+    "question": "Mention 5 technology companies."
+  },
+  {
+    "set": 13,
+    "round": 2,
+    "category": "Business",
+    "question": "Mention 5 automobile companies."
+  },
+  {
+    "set": 13,
+    "round": 3,
+    "category": "Business",
+    "question": "Mention 5 fashion brands."
+  },
+  {
+    "set": 13,
+    "round": 4,
+    "category": "Business",
+    "question": "Mention 5 banks."
+  },
+  {
+    "set": 13,
+    "round": 5,
+    "category": "Business",
+    "question": "Mention 5 payment platforms."
+  },
+  {
+    "set": 13,
+    "round": 6,
+    "category": "Business",
+    "question": "Mention 5 supermarket or retail brands."
+  },
+  {
+    "set": 13,
+    "round": 7,
+    "category": "Business",
+    "question": "Mention 5 airline companies."
+  },
+  {
+    "set": 13,
+    "round": 8,
+    "category": "Business",
+    "question": "Mention 5 hotel brands."
+  },
+  {
+    "set": 13,
+    "round": 9,
+    "category": "Business",
+    "question": "Mention 5 products people buy online."
+  },
+  {
+    "set": 13,
+    "round": 10,
+    "category": "Business",
+    "question": "Mention 5 things a business needs to operate."
+  },
+  {
+    "set": 14,
+    "round": 1,
+    "category": "School",
+    "question": "Mention 5 school subjects."
+  },
+  {
+    "set": 14,
+    "round": 2,
+    "category": "School",
+    "question": "Mention 5 mathematical operations or concepts."
+  },
+  {
+    "set": 14,
+    "round": 3,
+    "category": "School",
+    "question": "Mention 5 branches of science."
+  },
+  {
+    "set": 14,
+    "round": 4,
+    "category": "School",
+    "question": "Mention 5 things found in a laboratory."
+  },
+  {
+    "set": 14,
+    "round": 5,
+    "category": "School",
+    "question": "Mention 5 writing materials."
+  },
+  {
+    "set": 14,
+    "round": 6,
+    "category": "School",
+    "question": "Mention 5 professions that require a degree."
+  },
+  {
+    "set": 14,
+    "round": 7,
+    "category": "School",
+    "question": "Mention 5 types of maps."
+  },
+  {
+    "set": 14,
+    "round": 8,
+    "category": "School",
+    "question": "Mention 5 parts of the human body."
+  },
+  {
+    "set": 14,
+    "round": 9,
+    "category": "School",
+    "question": "Mention 5 renewable energy sources."
+  },
+  {
+    "set": 14,
+    "round": 10,
+    "category": "School",
+    "question": "Mention 5 forms of transportation."
+  },
+  {
+    "set": 15,
+    "round": 1,
+    "category": "Nature",
+    "question": "Mention 5 types of trees."
+  },
+  {
+    "set": 15,
+    "round": 2,
+    "category": "Nature",
+    "question": "Mention 5 flowers."
+  },
+  {
+    "set": 15,
+    "round": 3,
+    "category": "Nature",
+    "question": "Mention 5 natural resources."
+  },
+  {
+    "set": 15,
+    "round": 4,
+    "category": "Nature",
+    "question": "Mention 5 weather conditions."
+  },
+  {
+    "set": 15,
+    "round": 5,
+    "category": "Nature",
+    "question": "Mention 5 types of clouds."
+  },
+  {
+    "set": 15,
+    "round": 6,
+    "category": "Nature",
+    "question": "Mention 5 things found in a forest."
+  },
+  {
+    "set": 15,
+    "round": 7,
+    "category": "Nature",
+    "question": "Mention 5 things found in a desert."
+  },
+  {
+    "set": 15,
+    "round": 8,
+    "category": "Nature",
+    "question": "Mention 5 things found in an ocean."
+  },
+  {
+    "set": 15,
+    "round": 9,
+    "category": "Nature",
+    "question": "Mention 5 geological features."
+  },
+  {
+    "set": 15,
+    "round": 10,
+    "category": "Nature",
+    "question": "Mention 5 natural disasters."
+  },
+  {
+    "set": 16,
+    "round": 1,
+    "category": "Entertainment",
+    "question": "Mention 5 comedy shows or franchises."
+  },
+  {
+    "set": 16,
+    "round": 2,
+    "category": "Entertainment",
+    "question": "Mention 5 reality TV formats."
+  },
+  {
+    "set": 16,
+    "round": 3,
+    "category": "Entertainment",
+    "question": "Mention 5 famous fictional characters."
+  },
+  {
+    "set": 16,
+    "round": 4,
+    "category": "Entertainment",
+    "question": "Mention 5 board games."
+  },
+  {
+    "set": 16,
+    "round": 5,
+    "category": "Entertainment",
+    "question": "Mention 5 video game franchises."
+  },
+  {
+    "set": 16,
+    "round": 6,
+    "category": "Entertainment",
+    "question": "Mention 5 card games."
+  },
+  {
+    "set": 16,
+    "round": 7,
+    "category": "Entertainment",
+    "question": "Mention 5 dance styles."
+  },
+  {
+    "set": 16,
+    "round": 8,
+    "category": "Entertainment",
+    "question": "Mention 5 entertainment award categories."
+  },
+  {
+    "set": 16,
+    "round": 9,
+    "category": "Entertainment",
+    "question": "Mention 5 things an actor may do on set."
+  },
+  {
+    "set": 16,
+    "round": 10,
+    "category": "Entertainment",
+    "question": "Mention 5 things found at a concert."
+  },
+  {
+    "set": 17,
+    "round": 1,
+    "category": "Transport",
+    "question": "Mention 5 car brands."
+  },
+  {
+    "set": 17,
+    "round": 2,
+    "category": "Transport",
+    "question": "Mention 5 motorcycle brands."
+  },
+  {
+    "set": 17,
+    "round": 3,
+    "category": "Transport",
+    "question": "Mention 5 aircraft types."
+  },
+  {
+    "set": 17,
+    "round": 4,
+    "category": "Transport",
+    "question": "Mention 5 things found inside a car."
+  },
+  {
+    "set": 17,
+    "round": 5,
+    "category": "Transport",
+    "question": "Mention 5 road signs."
+  },
+  {
+    "set": 17,
+    "round": 6,
+    "category": "Transport",
+    "question": "Mention 5 public transport types."
+  },
+  {
+    "set": 17,
+    "round": 7,
+    "category": "Transport",
+    "question": "Mention 5 famous airports."
+  },
+  {
+    "set": 17,
+    "round": 8,
+    "category": "Transport",
+    "question": "Mention 5 railway systems or services."
+  },
+  {
+    "set": 17,
+    "round": 9,
+    "category": "Transport",
+    "question": "Mention 5 vehicle safety features."
+  },
+  {
+    "set": 17,
+    "round": 10,
+    "category": "Transport",
+    "question": "Mention 5 things a driver should carry or check."
+  },
+  {
+    "set": 18,
+    "round": 1,
+    "category": "Fashion",
+    "question": "Mention 5 types of shirts."
+  },
+  {
+    "set": 18,
+    "round": 2,
+    "category": "Fashion",
+    "question": "Mention 5 types of trousers."
+  },
+  {
+    "set": 18,
+    "round": 3,
+    "category": "Fashion",
+    "question": "Mention 5 types of dresses."
+  },
+  {
+    "set": 18,
+    "round": 4,
+    "category": "Fashion",
+    "question": "Mention 5 footwear brands."
+  },
+  {
+    "set": 18,
+    "round": 5,
+    "category": "Fashion",
+    "question": "Mention 5 accessories."
+  },
+  {
+    "set": 18,
+    "round": 6,
+    "category": "Fashion",
+    "question": "Mention 5 fabrics."
+  },
+  {
+    "set": 18,
+    "round": 7,
+    "category": "Fashion",
+    "question": "Mention 5 fashion colors."
+  },
+  {
+    "set": 18,
+    "round": 8,
+    "category": "Fashion",
+    "question": "Mention 5 things used for sewing."
+  },
+  {
+    "set": 18,
+    "round": 9,
+    "category": "Fashion",
+    "question": "Mention 5 types of traditional clothing."
+  },
+  {
+    "set": 18,
+    "round": 10,
+    "category": "Fashion",
+    "question": "Mention 5 fashion designers or fashion houses."
+  },
+  {
+    "set": 19,
+    "round": 1,
+    "category": "Health & Fitness",
+    "question": "Mention 5 forms of exercise."
+  },
+  {
+    "set": 19,
+    "round": 2,
+    "category": "Health & Fitness",
+    "question": "Mention 5 team sports that improve fitness."
+  },
+  {
+    "set": 19,
+    "round": 3,
+    "category": "Health & Fitness",
+    "question": "Mention 5 healthy foods."
+  },
+  {
+    "set": 19,
+    "round": 4,
+    "category": "Health & Fitness",
+    "question": "Mention 5 sources of protein."
+  },
+  {
+    "set": 19,
+    "round": 5,
+    "category": "Health & Fitness",
+    "question": "Mention 5 sources of vitamin C."
+  },
+  {
+    "set": 19,
+    "round": 6,
+    "category": "Health & Fitness",
+    "question": "Mention 5 things found in a gym."
+  },
+  {
+    "set": 19,
+    "round": 7,
+    "category": "Health & Fitness",
+    "question": "Mention 5 stretching exercises."
+  },
+  {
+    "set": 19,
+    "round": 8,
+    "category": "Health & Fitness",
+    "question": "Mention 5 outdoor fitness activities."
+  },
+  {
+    "set": 19,
+    "round": 9,
+    "category": "Health & Fitness",
+    "question": "Mention 5 habits that support general wellbeing."
+  },
+  {
+    "set": 19,
+    "round": 10,
+    "category": "Health & Fitness",
+    "question": "Mention 5 body parts used heavily in running."
+  },
+  {
+    "set": 20,
+    "round": 1,
+    "category": "Geography",
+    "question": "Mention 5 African countries on the Atlantic coast."
+  },
+  {
+    "set": 20,
+    "round": 2,
+    "category": "Geography",
+    "question": "Mention 5 countries in West Africa."
+  },
+  {
+    "set": 20,
+    "round": 3,
+    "category": "Geography",
+    "question": "Mention 5 countries in East Africa."
+  },
+  {
+    "set": 20,
+    "round": 4,
+    "category": "Geography",
+    "question": "Mention 5 countries in Southern Africa."
+  },
+  {
+    "set": 20,
+    "round": 5,
+    "category": "Geography",
+    "question": "Mention 5 countries in Europe."
+  },
+  {
+    "set": 20,
+    "round": 6,
+    "category": "Geography",
+    "question": "Mention 5 countries in Asia."
+  },
+  {
+    "set": 20,
+    "round": 7,
+    "category": "Geography",
+    "question": "Mention 5 countries in South America."
+  },
+  {
+    "set": 20,
+    "round": 8,
+    "category": "Geography",
+    "question": "Mention 5 countries in North America."
+  },
+  {
+    "set": 20,
+    "round": 9,
+    "category": "Geography",
+    "question": "Mention 5 countries in the Middle East."
+  },
+  {
+    "set": 20,
+    "round": 10,
+    "category": "Geography",
+    "question": "Mention 5 countries that are islands or island nations."
+  },
+  {
+    "set": 21,
+    "round": 1,
+    "category": "History",
+    "question": "Mention 5 ancient civilizations."
+  },
+  {
+    "set": 21,
+    "round": 2,
+    "category": "History",
+    "question": "Mention 5 famous historical battles."
+  },
+  {
+    "set": 21,
+    "round": 3,
+    "category": "History",
+    "question": "Mention 5 ancient cities."
+  },
+  {
+    "set": 21,
+    "round": 4,
+    "category": "History",
+    "question": "Mention 5 historical empires."
+  },
+  {
+    "set": 21,
+    "round": 5,
+    "category": "History",
+    "question": "Mention 5 famous explorers."
+  },
+  {
+    "set": 21,
+    "round": 6,
+    "category": "History",
+    "question": "Mention 5 famous philosophers."
+  },
+  {
+    "set": 21,
+    "round": 7,
+    "category": "History",
+    "question": "Mention 5 historical inventions."
+  },
+  {
+    "set": 21,
+    "round": 8,
+    "category": "History",
+    "question": "Mention 5 historical monuments."
+  },
+  {
+    "set": 21,
+    "round": 9,
+    "category": "History",
+    "question": "Mention 5 famous queens or empresses."
+  },
+  {
+    "set": 21,
+    "round": 10,
+    "category": "History",
+    "question": "Mention 5 events from the 20th century."
+  },
+  {
+    "set": 22,
+    "round": 1,
+    "category": "Language",
+    "question": "Mention 5 languages spoken in Africa."
+  },
+  {
+    "set": 22,
+    "round": 2,
+    "category": "Language",
+    "question": "Mention 5 languages spoken in Europe."
+  },
+  {
+    "set": 22,
+    "round": 3,
+    "category": "Language",
+    "question": "Mention 5 languages that use the Latin alphabet."
+  },
+  {
+    "set": 22,
+    "round": 4,
+    "category": "Language",
+    "question": "Mention 5 languages that use a non-Latin writing system."
+  },
+  {
+    "set": 22,
+    "round": 5,
+    "category": "Language",
+    "question": "Mention 5 words associated with travel."
+  },
+  {
+    "set": 22,
+    "round": 6,
+    "category": "Language",
+    "question": "Mention 5 words associated with school."
+  },
+  {
+    "set": 22,
+    "round": 7,
+    "category": "Language",
+    "question": "Mention 5 words associated with music."
+  },
+  {
+    "set": 22,
+    "round": 8,
+    "category": "Language",
+    "question": "Mention 5 words associated with football."
+  },
+  {
+    "set": 22,
+    "round": 9,
+    "category": "Language",
+    "question": "Mention 5 words that rhyme with 'day'."
+  },
+  {
+    "set": 22,
+    "round": 10,
+    "category": "Language",
+    "question": "Mention 5 common abbreviations."
+  },
+  {
+    "set": 23,
+    "round": 1,
+    "category": "Science",
+    "question": "Mention 5 planets in our solar system."
+  },
+  {
+    "set": 23,
+    "round": 2,
+    "category": "Science",
+    "question": "Mention 5 chemical elements."
+  },
+  {
+    "set": 23,
+    "round": 3,
+    "category": "Science",
+    "question": "Mention 5 mammals."
+  },
+  {
+    "set": 23,
+    "round": 4,
+    "category": "Science",
+    "question": "Mention 5 states of matter or related phases."
+  },
+  {
+    "set": 23,
+    "round": 5,
+    "category": "Science",
+    "question": "Mention 5 organs in the human body."
+  },
+  {
+    "set": 23,
+    "round": 6,
+    "category": "Science",
+    "question": "Mention 5 types of energy."
+  },
+  {
+    "set": 23,
+    "round": 7,
+    "category": "Science",
+    "question": "Mention 5 laboratory instruments."
+  },
+  {
+    "set": 23,
+    "round": 8,
+    "category": "Science",
+    "question": "Mention 5 branches of biology."
+  },
+  {
+    "set": 23,
+    "round": 9,
+    "category": "Science",
+    "question": "Mention 5 branches of physics."
+  },
+  {
+    "set": 23,
+    "round": 10,
+    "category": "Science",
+    "question": "Mention 5 branches of chemistry."
+  },
+  {
+    "set": 24,
+    "round": 1,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 numbers that are prime."
+  },
+  {
+    "set": 24,
+    "round": 2,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 even numbers."
+  },
+  {
+    "set": 24,
+    "round": 3,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 odd numbers."
+  },
+  {
+    "set": 24,
+    "round": 4,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 Roman numerals."
+  },
+  {
+    "set": 24,
+    "round": 5,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 words beginning with Z."
+  },
+  {
+    "set": 24,
+    "round": 6,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 words ending with -ing."
+  },
+  {
+    "set": 24,
+    "round": 7,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 words containing three vowels."
+  },
+  {
+    "set": 24,
+    "round": 8,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 words with exactly four letters."
+  },
+  {
+    "set": 24,
+    "round": 9,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 words beginning and ending with the same letter."
+  },
+  {
+    "set": 24,
+    "round": 10,
+    "category": "Numbers & Letters",
+    "question": "Mention 5 things represented by abbreviations."
+  },
+  {
+    "set": 25,
+    "round": 1,
+    "category": "Culture",
+    "question": "Mention 5 traditional Nigerian festivals."
+  },
+  {
+    "set": 25,
+    "round": 2,
+    "category": "Culture",
+    "question": "Mention 5 African traditional foods."
+  },
+  {
+    "set": 25,
+    "round": 3,
+    "category": "Culture",
+    "question": "Mention 5 African musical instruments."
+  },
+  {
+    "set": 25,
+    "round": 4,
+    "category": "Culture",
+    "question": "Mention 5 African clothing styles."
+  },
+  {
+    "set": 25,
+    "round": 5,
+    "category": "Culture",
+    "question": "Mention 5 cultural celebrations around the world."
+  },
+  {
+    "set": 25,
+    "round": 6,
+    "category": "Culture",
+    "question": "Mention 5 traditional wedding items or customs."
+  },
+  {
+    "set": 25,
+    "round": 7,
+    "category": "Culture",
+    "question": "Mention 5 traditional dances."
+  },
+  {
+    "set": 25,
+    "round": 8,
+    "category": "Culture",
+    "question": "Mention 5 cultural landmarks."
+  },
+  {
+    "set": 25,
+    "round": 9,
+    "category": "Culture",
+    "question": "Mention 5 things associated with Nigerian weddings."
+  },
+  {
+    "set": 25,
+    "round": 10,
+    "category": "Culture",
+    "question": "Mention 5 things associated with Nigerian naming ceremonies."
+  },
+  {
+    "set": 26,
+    "round": 1,
+    "category": "Everyday Life",
+    "question": "Mention 5 things you do before leaving home."
+  },
+  {
+    "set": 26,
+    "round": 2,
+    "category": "Everyday Life",
+    "question": "Mention 5 things people do on weekends."
+  },
+  {
+    "set": 26,
+    "round": 3,
+    "category": "Everyday Life",
+    "question": "Mention 5 things found in a wallet."
+  },
+  {
+    "set": 26,
+    "round": 4,
+    "category": "Everyday Life",
+    "question": "Mention 5 things people buy at a market."
+  },
+  {
+    "set": 26,
+    "round": 5,
+    "category": "Everyday Life",
+    "question": "Mention 5 household chores."
+  },
+  {
+    "set": 26,
+    "round": 6,
+    "category": "Everyday Life",
+    "question": "Mention 5 reasons someone might set an alarm."
+  },
+  {
+    "set": 26,
+    "round": 7,
+    "category": "Everyday Life",
+    "question": "Mention 5 things people do on a phone."
+  },
+  {
+    "set": 26,
+    "round": 8,
+    "category": "Everyday Life",
+    "question": "Mention 5 things found in a bathroom."
+  },
+  {
+    "set": 26,
+    "round": 9,
+    "category": "Everyday Life",
+    "question": "Mention 5 things found in a supermarket."
+  },
+  {
+    "set": 26,
+    "round": 10,
+    "category": "Everyday Life",
+    "question": "Mention 5 things people do before going to bed."
+  },
+  {
+    "set": 27,
+    "round": 1,
+    "category": "Hard Mix",
+    "question": "Mention 5 countries whose names contain the letter Z."
+  },
+  {
+    "set": 27,
+    "round": 2,
+    "category": "Hard Mix",
+    "question": "Mention 5 world capitals that are not the largest city in their country."
+  },
+  {
+    "set": 27,
+    "round": 3,
+    "category": "Hard Mix",
+    "question": "Mention 5 countries that have more than one official language."
+  },
+  {
+    "set": 27,
+    "round": 4,
+    "category": "Hard Mix",
+    "question": "Mention 5 African countries that were formerly British colonies."
+  },
+  {
+    "set": 27,
+    "round": 5,
+    "category": "Hard Mix",
+    "question": "Mention 5 famous structures built before 1900."
+  },
+  {
+    "set": 27,
+    "round": 6,
+    "category": "Hard Mix",
+    "question": "Mention 5 currencies whose names are not 'dollar', 'euro' or 'pound'."
+  },
+  {
+    "set": 27,
+    "round": 7,
+    "category": "Hard Mix",
+    "question": "Mention 5 cities located on two continents or associated with transcontinental geography."
+  },
+  {
+    "set": 27,
+    "round": 8,
+    "category": "Hard Mix",
+    "question": "Mention 5 countries that have a coastline on the Mediterranean Sea."
+  },
+  {
+    "set": 27,
+    "round": 9,
+    "category": "Hard Mix",
+    "question": "Mention 5 languages with more than 50 million speakers."
+  },
+  {
+    "set": 27,
+    "round": 10,
+    "category": "Hard Mix",
+    "question": "Mention 5 inventions that changed modern communication."
+  },
+  {
+    "set": 28,
+    "round": 1,
+    "category": "Final Challenge",
+    "question": "Mention 5 things that can be both a noun and a verb."
+  },
+  {
+    "set": 28,
+    "round": 2,
+    "category": "Final Challenge",
+    "question": "Mention 5 countries whose names begin and end with the same letter."
+  },
+  {
+    "set": 28,
+    "round": 3,
+    "category": "Final Challenge",
+    "question": "Mention 5 animals whose names have exactly three syllables."
+  },
+  {
+    "set": 28,
+    "round": 4,
+    "category": "Final Challenge",
+    "question": "Mention 5 famous people known primarily by one name."
+  },
+  {
+    "set": 28,
+    "round": 5,
+    "category": "Final Challenge",
+    "question": "Mention 5 places whose names contain the word 'New'."
+  },
+  {
+    "set": 28,
+    "round": 6,
+    "category": "Final Challenge",
+    "question": "Mention 5 foods that can be eaten hot or cold."
+  },
+  {
+    "set": 28,
+    "round": 7,
+    "category": "Final Challenge",
+    "question": "Mention 5 objects that can be used both indoors and outdoors."
+  },
+  {
+    "set": 28,
+    "round": 8,
+    "category": "Final Challenge",
+    "question": "Mention 5 words that can be both a person's name and an ordinary English word."
+  },
+  {
+    "set": 28,
+    "round": 9,
+    "category": "Final Challenge",
+    "question": "Mention 5 things that can be measured in both litres and millilitres."
+  },
+  {
+    "set": 28,
+    "round": 10,
+    "category": "Final Challenge",
+    "question": "Mention 5 categories in which a player can be the first to answer."
+  },
+  {
+    "set": 29,
+    "round": 1,
+    "category": "Shopping",
+    "question": "Mention 5 things people commonly buy in a supermarket."
+  },
+  {
+    "set": 29,
+    "round": 2,
+    "category": "Shopping",
+    "question": "Mention 5 things people commonly buy online."
+  },
+  {
+    "set": 29,
+    "round": 3,
+    "category": "Shopping",
+    "question": "Mention 5 types of footwear."
+  },
+  {
+    "set": 29,
+    "round": 4,
+    "category": "Shopping",
+    "question": "Mention 5 types of bags."
+  },
+  {
+    "set": 29,
+    "round": 5,
+    "category": "Shopping",
+    "question": "Mention 5 household appliances."
+  },
+  {
+    "set": 29,
+    "round": 6,
+    "category": "Shopping",
+    "question": "Mention 5 stationery items."
+  },
+  {
+    "set": 29,
+    "round": 7,
+    "category": "Shopping",
+    "question": "Mention 5 things sold in a pharmacy."
+  },
+  {
+    "set": 29,
+    "round": 8,
+    "category": "Shopping",
+    "question": "Mention 5 things sold at a bakery."
+  },
+  {
+    "set": 29,
+    "round": 9,
+    "category": "Shopping",
+    "question": "Mention 5 things found in a hardware shop."
+  },
+  {
+    "set": 29,
+    "round": 10,
+    "category": "Shopping",
+    "question": "Mention 5 things people buy for a new house."
+  },
+  {
+    "set": 30,
+    "round": 1,
+    "category": "Royal Final",
+    "question": "Mention 5 famous crowns, royal titles or royal symbols."
+  },
+  {
+    "set": 30,
+    "round": 2,
+    "category": "Royal Final",
+    "question": "Mention 5 famous palaces."
+  },
+  {
+    "set": 30,
+    "round": 3,
+    "category": "Royal Final",
+    "question": "Mention 5 countries that currently have a monarchy."
+  },
+  {
+    "set": 30,
+    "round": 4,
+    "category": "Royal Final",
+    "question": "Mention 5 famous kings or queens from history."
+  },
+  {
+    "set": 30,
+    "round": 5,
+    "category": "Royal Final",
+    "question": "Mention 5 things associated with a royal ceremony."
+  },
+  {
+    "set": 30,
+    "round": 6,
+    "category": "Royal Final",
+    "question": "Mention 5 things associated with a castle."
+  },
+  {
+    "set": 30,
+    "round": 7,
+    "category": "Royal Final",
+    "question": "Mention 5 famous fictional kings or queens."
+  },
+  {
+    "set": 30,
+    "round": 8,
+    "category": "Royal Final",
+    "question": "Mention 5 words associated with royalty."
+  },
+  {
+    "set": 30,
+    "round": 9,
+    "category": "Royal Final",
+    "question": "Mention 5 famous royal families or dynasties."
+  },
+  {
+    "set": 30,
+    "round": 10,
+    "category": "Royal Final",
+    "question": "Mention 5 things that can make a competition feel like a royal battle."
+  }
+]
